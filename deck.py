@@ -28,8 +28,3 @@ class Desk:
         card = [self.desk.pop()]
         return View(card)
 
-
-
-ob = Desk()
-print(View(ob.desk[:1]))
-print(ob.get_card())
