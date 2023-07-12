@@ -6,6 +6,7 @@ class Desk:
     def __init__(self):
         self.desk = self.generate_deck()
 
+
     suits = ("hearts", "spades", "diamonds", "clubs")
     ranks = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
 
@@ -21,8 +22,14 @@ class Desk:
                 points = 11
             card = Card(rank, suit, value=points, hidden=False, picture=True)
             cards.append(card)
-        return cards
+        return View(cards)
 
     def get_card(self):
         card = [self.desk.pop()]
-        return card
+        return View(card)
+
+
+
+ob = Desk()
+print(View(ob.desk[:1]))
+print(ob.get_card())
